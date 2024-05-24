@@ -18,11 +18,10 @@ function MainScreen({ exitGame }) {
   };
 
   const handleDiceRoll = () => {
-    const diceNumber = Math.floor(Math.random() * 6) + 1;
-    setCurrentDice(diceNumber);
-
     if (selectedNumber === 0) return alert("Please select a number");
     else {
+      const diceNumber = Math.floor(Math.random() * 6) + 1;
+      setCurrentDice(diceNumber);
       if (selectedNumber === diceNumber) {
         setScore((prev) => prev + diceNumber);
       } else {
@@ -74,7 +73,7 @@ function MainScreen({ exitGame }) {
 }
 
 const GameInfo = styled.div`
-  background-color: #FBF1F1;
+  background-color: #fbf1f1;
   padding: 10px;
 `;
 
